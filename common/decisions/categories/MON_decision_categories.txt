@@ -1,0 +1,27 @@
+MON_power_struggle_cat = {
+	priority = 300
+	icon = gre_faction_management
+
+	allowed = {
+	MON = {is_in_faction_with = SOV}
+	MON = { NOT = { has_completed_focus = MON_amar_gets_purged } }
+	MON = { NOT = { has_completed_focus = MON_support_genden } }
+	MON = { NOT = { has_completed_focus = MON_eliminate_amar_supporters } }
+	OR = {
+		original_tag = MON
+		original_tag = SOV
+	}
+	MON = {has_goverment = communism}
+	SOV = {has_goverment = communism}
+	}
+}
+MON_inner_mon_cat = {
+	priority = 290
+	icon = gre_faction_management
+	picture = GFX_decision_cat_picture_inner
+
+	allowed = {
+	has_global_flag = JAP_MON_inner_accept
+	original_tag = MON
+	}
+}

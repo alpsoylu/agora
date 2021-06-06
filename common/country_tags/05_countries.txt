@@ -1,0 +1,7 @@
+#####-----> Country Tags <><> <><> <><> <><> <><>
+
+ALA = "countries/Alawiti.txt"
+JBA = "countries/Jabal_druze.txt"
+HAT = "countries/Hatay.txt"
+
+#####-----> End <><> <><> <><> <><> <><>

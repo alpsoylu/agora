@@ -1,0 +1,73 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_fra_syr_treaty_icon"
+		texturefile = "gfx/event_pictures/fra_syr.dds"
+	}
+	spriteType = {
+		name = "GFX_innermon"
+		texturefile = "gfx/event_pictures/innermon.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_modifiers_mon_arranged_territorial_expansion"
+		texturefile = "gfx/event_pictures/state_modifiers/mongol_territory.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_united_syr"
+		texturefile = "gfx/interface/ideas/united_syr.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_divided_syr"
+		texturefile = "gfx/interface/ideas/divided_syr.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mon_greater_mon"
+		texturefile = "gfx/interface/ideas/mon_greater_mon.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fra_mandate"
+		texturefile = "gfx/interface/ideas/fra_mandate.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fra_inf"
+		texturefile = "gfx/interface/ideas/fra_inf.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_greater_syria"
+		texturefile = "gfx/interface/ideas/idea_greater_syria.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_lkhumbe"
+		texturefile = "gfx/interface/ideas/lkhumbe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_mon_warriors"
+		texturefile = "gfx/interface/ideas/mon_warriors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_monrev"
+		texturefile = "gfx/interface/ideas/lkhumbe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_cengiz"
+		texturefile = "gfx/interface/ideas/cengiz.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mon_sov_inf"
+		texturefile = "gfx/interface/ideas/mon_sov_inf.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_cat_picture_inner"
+		texturefile = "gfx/interface/decisions/inner.dds"
+	}
+	
+	
+}

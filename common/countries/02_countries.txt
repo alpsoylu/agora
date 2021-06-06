@@ -1,0 +1,16 @@
+
+
+ALA = {
+	color = rgb { 140  116  141 }
+	color_ui = rgb { 140  116  141 }
+}
+
+JBA = {
+	color = rgb { 63  150  58 }
+	color_ui = rgb { 63  150  58 }
+}
+
+HAT = {
+	color = rgb { 255 118 126 }
+	color_ui = rgb { 255 118 126 }
+}

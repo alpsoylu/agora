@@ -1,0 +1,95 @@
+ideas = {
+    country = {
+        EGY_break_free = {
+
+            picture = generic_foreign_capital
+
+            allowed = {
+                always = no
+            }
+
+            allowed_in_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+            modifier = {
+				autonomy_gain = 2
+			}
+        }
+        EGY_royalist_way_idea = {
+
+            picture = generic_foreign_capital
+
+            allowed = {
+                always = no
+            }
+
+            allowed_in_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				neutrality_drift = 0.15
+			}
+        }
+        EGY_fascist_way_idea = {
+
+            picture = generic_foreign_capital
+
+            allowed = {
+                always = no
+            }
+            
+            allowed_in_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				fascism_drift = 0.15
+			}
+        }
+        EGY_communist_way_idea = {
+
+            picture = generic_foreign_capital
+
+            allowed = {
+                always = no
+            }
+
+            allowed_in_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+            modifier = {
+				communism_drift = 0.15
+			}
+        }
+        EGY_arabic_workers_idea = {
+
+            picture = generic_foreign_capital
+
+            allowed = {
+                always = no
+            }
+
+            allowed_in_civil_war = {
+                always = yes
+            }
+
+            removal_cost = -1
+
+             modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+        }
+    }
+}
+		

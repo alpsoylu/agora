@@ -1,0 +1,947 @@
+focus_tree = {
+	id = Syria_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SYR
+		}
+	}
+	
+		default = no
+		reset_on_civilwar = no
+		
+	continuous_focus_position = { x = 0 y = 1000 }	
+		
+	shared_focus = ABC_establish_a_general_staff	
+	shared_focus = GEN_Aviation_Effort
+	shared_focus = GEN_Naval_Effort
+	shared_focus = GEN_Industrial_Start
+	
+	
+	
+	
+	#ASIL FOCUS
+	focus = {
+		id = SYR_franco_syrian_treaty
+		icon = GFX_syr
+		x = 45
+		y = 0
+		available = {
+		date > 1936.06.01
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			SYR = { country_event = { id = rp_syr.1 } }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_divided_we_are_stronger
+		icon = GFX_syr3
+		x = 0
+		y = 1
+		prerequisite = {
+		focus = SYR_franco_syrian_treaty
+		}
+		mutually_exclusive = {
+		focus = SYR_united_we_are_stronger
+		}
+		available = {
+		
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+		relative_position_id = SYR_franco_syrian_treaty
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_release_the_alawitis
+		icon = GFX_alawiti
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+		focus = SYR_divided_we_are_stronger
+		}
+		mutually_exclusive = {
+		focus = SYR_integrate_the_alawitis
+		}
+		available = {
+		
+		}
+		cost = 10
+		
+		completion_reward = {
+		ALA = {
+		transfer_state = 861
+		set_cosmetic_tag = ALA_mandate
+		}
+		SYR = {
+		set_autonomy = {
+		target = ALA
+		autonomy_state = autonomy_satellite
+		}
+		}	
+		}
+		relative_position_id = SYR_divided_we_are_stronger
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_integrate_the_alawitis
+		icon = GFX_alawiti_2
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+		focus = SYR_divided_we_are_stronger
+		}
+		mutually_exclusive = {
+		focus = SYR_release_the_alawitis
+		}
+		available = {
+		
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		add_state_core = 861
+		}
+		relative_position_id = SYR_divided_we_are_stronger
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_release_the_druzes
+		icon = GFX_druzes
+		x = -2
+		y = 2
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+		focus = SYR_release_the_alawitis
+		focus = SYR_integrate_the_alawitis
+		}
+		mutually_exclusive = {
+		focus = SYR_integrate_the_druzes
+		}
+		available = {
+		
+		}
+		cost = 10
+		
+		completion_reward = {
+		JBA = {
+		transfer_state = 860
+		set_cosmetic_tag = JBA_mandate
+		}
+		SYR = {
+		set_autonomy = {
+		target = JBA
+		autonomy_state = autonomy_satellite
+		}
+		}	
+		}
+		relative_position_id = SYR_divided_we_are_stronger
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_integrate_the_druzes
+		icon = GFX_druzes_2
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+		focus = SYR_release_the_alawitis
+		focus = SYR_integrate_the_alawitis
+		}
+		mutually_exclusive = {
+		focus = SYR_release_the_druzes
+		}
+		available = {
+		
+		}
+		cost = 10
+		
+		completion_reward = {
+		add_state_core = 860
+		}
+		relative_position_id = SYR_divided_we_are_stronger
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_annex_alexandreta
+		icon = GFX_hatay_1
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+		focus = SYR_release_the_druzes
+		focus = SYR_integrate_the_druzes
+		}
+		mutually_exclusive = {
+		focus = SYR_give_hatay_to_turkey
+		}
+		available = {
+		
+		}
+		cost = 10
+		
+		completion_reward = {
+		SYR = {
+		transfer_state = 799
+		}
+		TUR = { country_event = { id = rp_syr.2 } }
+		}
+		relative_position_id = SYR_divided_we_are_stronger
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = SYR_give_hatay_to_turkey
+		icon =  GFX_hatay_3
+		x = -2
+		y = 3
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+		focus = SYR_release_the_druzes
+		focus = SYR_integrate_the_druzes
+		}
+		mutually_exclusive = {
+		focus = SYR_annex_alexandreta
+		}
+		available = {
+		
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		HAT = {
+		transfer_state = 799
+		set_cosmetic_tag = HAT_true
+		}
+		}
+		relative_position_id = SYR_divided_we_are_stronger
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	#POL DIRECTION
+	
+	focus = {
+		id = SYR_political_direction
+		icon =  GFX_syr2
+		x = 55
+		y = 0
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		OR = {
+		has_completed_focus = SYR_give_hatay_to_turkey
+		has_completed_focus = SYR_annex_alexandreta
+		}
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	##FAISAL LEGACY##
+	focus = {
+		id = SYR_legacy_of_faisal
+		icon =  GFX_faisal
+		x = -4
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+		NOT = {
+		OR = {
+		has_completed_focus = SYR_release_the_alawitis
+		has_completed_focus = SYR_release_the_druzes
+		has_completed_focus = SYR_give_hatay_to_turkey
+		}
+		}
+		}
+		prerequisite = {
+		focus = SYR_political_direction
+		}
+		cost = 10
+		mutually_exclusive = {
+		focus = SYR_continue_with_the_republic
+		focus = SYR_form_the_syrian_national_council
+		}
+		completion_reward = {
+		remove_ideas = french_influence
+		custom_effect_tooltip = SYR_dangerous_tt
+		
+		hidden_effect = {
+		set_politics = {
+	ruling_party = neutrality
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+		FRA = {
+		end_puppet = SYR
+		end_puppet = LEB
+		}
+		FRA = { country_event = { id = rp_syr.13 hours 6 } }
+		}
+		}
+		relative_position_id = SYR_political_direction
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_request_recognition_from_iraq
+		icon = GFX_goal_IRQ_hashemites
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_legacy_of_faisal
+		}
+		cost = 10
+		completion_reward = {
+		IRQ = { country_event = { id = rp_syr.9 } }
+		}
+		relative_position_id = SYR_legacy_of_faisal
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_iraqi_conquest
+		icon = GFX_irq_syr1
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+		focus = SYR_request_recognition_from_iraq
+		}
+		mutually_exclusive = {
+		focus = SYR_union_with_iraq
+		}
+		cost = 10
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = IRQ }
+		}
+		relative_position_id = SYR_request_recognition_from_iraq
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_union_with_iraq
+		icon = GFX_irq_syr2
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		has_global_flag = SYR_IRQ_accept
+		}
+		prerequisite = {
+		focus = SYR_request_recognition_from_iraq
+		}
+		mutually_exclusive = {
+		focus = SYR_iraqi_conquest
+		}
+		cost = 10
+		completion_reward = {
+		IRQ = { country_event = { id = rp_syr.8 } }
+		}
+		relative_position_id = SYR_request_recognition_from_iraq
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_conquer_lebannon
+		icon = GFX_lebannon_war
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_iraqi_conquest
+		focus = SYR_union_with_iraq
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = LEB }
+		add_state_core = 553
+		}
+		relative_position_id = SYR_request_recognition_from_iraq
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_request_british_territories
+		icon = GFX_focus_chi_british_cooperation
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_conquer_lebannon
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+				random_neighbor_country = { 
+					limit = {
+						owns_state = 830
+					}
+					country_event = { id = rp_syr.10 hours = 6} 
+				}
+		}
+		relative_position_id = SYR_conquer_lebannon
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	
+	##DEMOCRACY##
+	focus = {
+		id = SYR_continue_with_the_republic
+		icon =  GFX_syr_democracy
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_political_direction
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+		focus = SYR_form_the_syrian_national_council
+		focus = SYR_legacy_of_faisal
+		}
+		completion_reward = {
+		custom_effect_tooltip = SYR_fra_protect_tt
+		hidden_effect = {
+		set_politics = {
+	ruling_party = democratic
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 48
+	}
+	}
+		}
+		relative_position_id = SYR_political_direction
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+
+
+	focus = {
+		id = SYR_strenghten_democracy
+		icon =  GFX_elections1
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_continue_with_the_republic
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.25
+	}
+		}
+		relative_position_id = SYR_continue_with_the_republic
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SYR_respect_the_independence_of_lebannon
+		icon = GFX_guarantee_leb
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_strenghten_democracy
+		}
+		mutually_exclusive = {
+		focus = SYR_annexation_of_lebanon
+		}
+		cost = 10
+
+		completion_reward = {
+		add_opinion_modifier = {
+    target = LEB
+    modifier = huge_increase
+}
+		}
+		relative_position_id = SYR_strenghten_democracy
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SYR_annexation_of_lebanon
+		icon =  GFX_lebannon_war
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_strenghten_democracy
+		}
+		mutually_exclusive = {
+		focus = SYR_respect_the_independence_of_lebannon
+		}
+		cost = 10
+		completion_reward = {
+		add_state_core = 553
+		create_wargoal = {
+	type = take_state_focus
+	target = LEB
+	generator = { 553 }
+	}
+		}
+		relative_position_id = SYR_strenghten_democracy
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = SYR_for_democracy
+		icon =  GFX_sign_parliement
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_annexation_of_lebanon
+		focus = SYR_respect_the_independence_of_lebannon
+		}
+		cost = 10
+		completion_reward = {
+		add_ideas = idea_syr_for_democracy
+		}
+		relative_position_id = SYR_strenghten_democracy
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	##FASCISM##
+	focus = {
+		id = SYR_form_the_syrian_national_council
+		icon =  GFX_syr_fascism
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_political_direction
+		}
+		mutually_exclusive = {
+		focus = SYR_continue_with_the_republic
+		focus = SYR_legacy_of_faisal
+		}
+		cost = 10
+		
+		completion_reward = {
+		remove_ideas = french_influence
+		custom_effect_tooltip = SYR_dangerous_tt
+		set_party_name = { 
+    ideology = fascism
+    long_name = SYR_nat_con
+    name = SYR_nat_con_long
+}
+		hidden_effect = {
+		FRA = { country_event = { id = rp_syr.13 hours 6 } }
+		FRA = {
+		end_puppet = SYR
+		}
+		set_politics = {
+	ruling_party = fascism
+        elections_allowed = yes
+        last_election = "1935.12.17"
+        election_frequency = 12000
+}
+}
+		}
+		relative_position_id = SYR_political_direction
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	focus = {
+		id = SYR_fasc_request_recognition_from_germany
+		icon = GFX_syr_ger
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_form_the_syrian_national_council
+		}
+		cost = 10
+		completion_reward = {
+		GER = { country_event = { id = rp_syr.14 } }
+		}
+		relative_position_id = SYR_form_the_syrian_national_council
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_fasc_iraqi_conquest
+		icon = GFX_irq_syr1
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 0
+		}
+		prerequisite = {
+		focus = SYR_fasc_request_recognition_from_germany
+		}
+		cost = 10
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = IRQ }
+		}
+		relative_position_id = SYR_fasc_request_recognition_from_germany
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_fasc_conquer_lebannon
+		icon = GFX_lebannon_war
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_fasc_iraqi_conquest
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		create_wargoal = { type = annex_everything target = LEB }
+		add_state_core = 553
+		}
+		relative_position_id = SYR_fasc_request_recognition_from_germany
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_fasc_request_british_territories
+		icon = GFX_focus_chi_british_cooperation
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		
+		}
+		prerequisite = {
+		focus = SYR_fasc_conquer_lebannon
+		}
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+				random_neighbor_country = { 
+					limit = {
+						owns_state = 830
+					}
+					country_event = { id = rp_syr.10 } 
+				}
+		}
+		relative_position_id = SYR_fasc_conquer_lebannon
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#FACTION STUFF#
+	
+	
+	focus = {
+		id = SYR_greater_syria
+		icon =  GFX_greater_syr
+		x = 55
+		y = 6
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		controls_state = 799
+		controls_state = 677
+		controls_state = 861
+		controls_state = 680
+		controls_state = 860
+		controls_state = 554
+		controls_state = 553
+		controls_state = 455
+		controls_state = 830
+		controls_state = 454
+		controls_state = 831
+		controls_state = 675
+		controls_state = 291
+		controls_state = 676
+		controls_state = 656
+		}
+		prerequisite = {
+		focus = SYR_request_british_territories
+		focus = SYR_fasc_request_british_territories
+		}
+		cost = 10
+		completion_reward = {
+		add_ideas = idea_greater_syria
+		add_state_core = 799
+		add_state_core = 677
+		add_state_core = 861
+		add_state_core = 680
+		add_state_core = 860
+		add_state_core = 554
+		add_state_core = 553
+		add_state_core = 455
+		add_state_core = 830
+		add_state_core = 454
+		add_state_core = 831
+		add_state_core = 675
+		add_state_core = 291
+		add_state_core = 676
+		add_state_core = 656
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_join_axis
+		icon =  GFX_focus_chi_mission_to_germany
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		prerequisite = {
+		focus = SYR_greater_syria
+		}
+		mutually_exclusive = {
+		focus = SYR_join_allies
+		focus = SYR_join_comintern
+		}
+		cost = 10
+		completion_reward = {
+		GER = { country_event = { id = generic.2 } }
+		}
+		relative_position_id = SYR_greater_syria
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_join_allies
+		icon =  GFX_focus_chi_british_cooperation
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		prerequisite = {
+		focus = SYR_greater_syria
+		}
+		mutually_exclusive = {
+		focus = SYR_join_comintern
+		focus = SYR_join_axis
+		}
+		cost = 10
+		completion_reward = {
+		ENG = { country_event = { id = generic.2 } }
+		}
+		relative_position_id = SYR_greater_syria
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = SYR_join_comintern
+		icon =  GFX_focus_chi_mission_to_the_soviet_union
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		prerequisite = {
+		focus = SYR_greater_syria
+		}
+		mutually_exclusive = {
+		focus = SYR_join_allies
+		focus = SYR_join_axis 
+		}
+		cost = 10
+		completion_reward = {
+		SOV = { country_event = { id = generic.2 } }
+		}
+		relative_position_id = SYR_greater_syria
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+}

@@ -1,0 +1,38 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			MON = { country_event = { id = rp_mon.2 days = 7} }
+				set_variable = { var = power_of_cho value = 30 }
+				set_variable = { var = power_of_amar value = 70 }
+				FRA = {
+				set_autonomy = {
+		target = SYR
+		autonomy_state = autonomy_colony
+		}
+		}
+		}
+	}
+	on_weekly_MON = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = JAP_MON_inner_accept
+					is_in_faction_with = JAP
+					any_state = {
+						has_dynamic_modifier = { modifier = mongolian_inner_mongolia_dm }
+						OR = {
+							is_controlled_by = JAP
+							controller = {
+								is_in_faction_with = JAP
+								NOT = { tag = MON }
+								NOT = { PREV = { is_core_of = PREV } }
+							}
+						}
+					}
+				}
+				MON = { country_event = rp_mon.11 }
+			}
+		}
+	}
+	
+}

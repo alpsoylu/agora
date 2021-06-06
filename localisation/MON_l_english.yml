@@ -1,0 +1,140 @@
+﻿l_english:
+ MON_support_choibalsan:0 "Support Choibalsan"
+ MON_support_genden:0 "Support Genden"
+ MON_aftermath_of_gendens_visit_to_moscow:0 "Aftermath of Genden's visit to Moscow"
+ MON_appoint_choibalsan:0 "Appoint Choibalsan"
+ MON_appoint_amar:0 "Appoint Amar"
+ MON_dreams_of_a_greater_mongolia:0 "Dreams of a Greater Mongolia"
+ MON_peacefull_revolution:0 "Peacefull Revolution"
+ MON_forgive_the_victims_of_lkhumbe_affair:0 "Forgive the Victims of Lkhümbe Affair"
+ MON_increase_the_popularity_of_amar:0 "Increase the Popularity of Amar"
+ MON_anti_stalinist_campaign:0 "Anti Stalinist Campaign"
+ MON_broke_the_soviet_mongolian_alliance:0 "Break the Soviet Mongolian Alliance"
+ MON_amar_gets_purged:0 "Amar Gets Purged"
+ MON_eliminate_amar_supporters:0 "Eliminate Amar's Supporters"
+ MON_strenghten_military_ties_with_ussr:0 "Strenghten Military Ties with USSR"
+ MON_strenghten_economic_ties_with_ussr:0 "Strenghten Economic Ties with USSR"
+ MON_send_an_embassador_to_japan:0 "Send an Embassador to [JAP.GetName]"
+ MON_deal_for_inner_mongolia:0 "Deal for Inner Mongolia"
+ MON_stalinist_revolution:0 "Stalinist Revolution"
+ MON_join_jap_faction:0 "Join the [JAP.GetFactionName]"
+ MON_deal_for_tannu_tuva:0 "Deal For [TAN.GetName]"
+ MON_legacy_of_mongolian_wariors:0 "Legacy of Mongolian Warriors"
+ MON_legacy_of_genghis_khan:0 "Legacy of Genghis Han"
+ MON_embrace_buddhism:0 "Embrace Buddhism"
+ MON_proclaim_greater_mongolia:0 "Proclaim Greater Mongolia"
+ MON_declare_semi_independence:0 "Declare Semi-Independence"
+ 
+ french_influence:0 "French Influence"
+ french_mandate:0 "French Mandate"
+ 
+ MON_GATHERING_STORM_DESC:0 "Mongolia has been in Soviet influence since 1924.And with Mongolian Leader Genden openly opposing Stalin,critical times might be coming for Mongolia.Will the Mongolian people support their leader Genden or will they support Stalin's puppet Choibalsan who is in a mission to stop genden?"
+ SYR_GATHERING_STORM_DESC:0 "Syria is under French Mandate since 1923.But the Syrian National Bloc is trying to gather their independence.French and Syrian delegates are currently trying to agree on a deal in Paris.The results will come soon.Will Syria get their independence,if they do will they expand their borders as a fascist or monarchist state?Or will they stay under the protection of democracy?"
+ 
+ SYR_nat_con:0 "SNC"
+ SYR_nat_con_long:0 "Syrian National Council"
+ 
+ 
+ 
+ 
+ MON_soviet_influence:0 "Soviet Influence"
+ JAP_MON_elci_accept:0 "§YJapan has accepted the Mongolian proposal to open a Mongolian Embassy in Japan§!"
+ JAP_MON_elci_reject:0 "§YJapan has rejected the Mongolian proposal to open a Mongolian Embassy in Japan§!"
+ rp_mon.4:0 "Mongolia offers a non-aggresion pact for Tannu-Tuva"
+ rp_mon.4.t:0 "Mongolia offers a non-aggresion pact for Tannu-Tuva"
+ rp_mon.4.d:0 "Mongolia offers a non-aggresion pact for Tannu-Tuva"
+ rp_mon.4.a:0 "Accept it"
+ rp_mon.4.b:0 "Reject it"
+ 
+ rp_mon.5:0 "Soviet Union accepts our deal for Tannu-Tuva"
+ rp_mon.5.t:0 "Soviet Union accepts our deal for Tannu-Tuva"
+ rp_mon.5.d:0 "Soviet Union accepts our deal for Tannu-Tuva"
+ rp_mon.5.a:0 "Delightful"
+ 
+ rp_mon.6:0 "Soviet Union rejects our deal for Tannu-Tuva"
+ rp_mon.6.t:0 "Soviet Union rejects our deal for Tannu-Tuva"
+ rp_mon.6.d:0 "Soviet Union rejects our deal for Tannu-Tuva"
+ rp_mon.6.a:0 "We will take it no matter what!"
+ 
+ rp_mon.7:0 "[MON.GetName] wants to send an ambassador to Japan"
+ rp_mon.7.t:0 "[MON.GetName] wants to send an ambassador to Japan"
+ rp_mon.7.d:0 "[MON.GetName] wants to send an ambassador to Japan"
+ rp_mon.7.a:0 "Yes.They can help us"
+ rp_mon.7.b:0 "No!We dont want to go into close relations with [MON.GetName]"
+ 
+ rp_mon.8:0 "[MON.GetName] wants Inner Mongolia in terms of an alliance"
+ rp_mon.8.t:0 "[MON.GetName] wants Inner Mongolia in terms of an alliance"
+ rp_mon.8.d:0 "[MON.GetName] wants Inner Mongolia when China is conquered in terms of an alliance"
+ rp_mon.8.a:0 "This land is too little.We can gift it to our Mongolian Allies."
+ rp_mon.8.b:0 "No!All of China belongs to Japan"
+ 
+ rp_mon.9:0 "Japan Accepts our proposal for Inner Mongolia"
+ rp_mon.9.t:0 "Japan Accepts our proposal for Inner Mongolia"
+ rp_mon.9.d:0 "Japan Accepts our proposal for Inner Mongolia in terms of an alliance"
+ rp_mon.9.a:0 "Delightful"
+ 
+ rp_mon.10:0 "Japan rejects our proposal for Inner Mongolia"
+ rp_mon.10.t:0 "Japan rejects our proposal for Inner Mongolia"
+ rp_mon.10.d:0 "Japan rejects our proposal for Inner Mongolia in terms of an alliance"
+ rp_mon.10.a:0 "We thought we were friends!"
+ 
+ MON_dreams_of_greater_mon:0 "Dreams of a Greater Mongolia"
+ MON_greater_mon:0 "Greater Mongolia"
+ 
+ 
+ 
+ rp_mon.11:0 "We recieve territory from Inner Mongolia"
+ rp_mon.11.t:0 "We recieve territory from Inner Mongolia"
+ rp_mon.11.d:0 "We recieve territory from Inner Mongolia"
+ rp_mon.11.a:0 "The Legacy of Genghis lives!"
+ MON_inner_mon:0 "Inner Mongolian Territory"
+ MON_arranged_tt:0 "This is §YInner Mongolia§!.If this land is controlled by §OJapan§! or §Cone of its allies§!.A decision will unlock to transfer the territory to §YMongolia§!"
+ 
+ 
+ 
+ MON_inner_mon_cat:0 "Reclaimation of Inner Mongolia"
+ MON_reclaim_dabacheng:0 "Reclaima Dabacheng"
+ MON_reclaim_jiuguan:0 "Reclaima Jiuguan"
+ MON_reclaim_siuyuan:0 "Reclaima Siuyuan"
+ MON_reclaim_south_chorar:0 "Reclaima South Charar"
+ MON_reclaim_chorar:0 "Reclaima South Charar"
+ MON_reclaim_hulunbuir:0 "Reclaim Hulunbuir"
+ MON_inner_mon_cat_desc:0 "We will reclaim our rightfull lands in Inner Mongolia.Our ally Japan has promised us"
+ 
+ 
+ MON_peacefull_rev:0 "Peacefull Revolution"
+ 
+ JAP_MON_inner_accept:0 "§YJapan has accepted the Mongolian proposal of Mongolia gaining Inner Mongolia for a Japanese Mongolian Alliance§!"
+ 
+ rp_mon.1:0 "Peljidiin Genden insulted stalin at the Moscow Mongolian Embassy"
+ rp_mon.1.t:0 "Peljidiin Genden insulted stalin at the Moscow Mongolian Embassy"
+ rp_mon.1.d:0 "Leader of Mongolia,Peljidiin Genden meeted Stalin at the Moscow Mongolian Embassy.And later that night in public drunk Genden shouted at Stalin:'You bloddy Georgian,you have become a virtual Russian Tsar.Then he slapped Stalin and broke his pipe.He also opposed Stalin in the last couple of years.Then he returned to Mongolia.What should we do about it?"
+ rp_mon.1.a:0 "He was just drunk."
+ rp_mon.1.b:0 "Drunk people tell the truth.He is a traitor!Tell Choibalsan to defeat him."
+ 
+ rp_mon.2:0 "Peljidiin Genden insulted stalin at the Moscow Mongolian Embassy"
+ rp_mon.2.t:0 "Peljidiin Genden insulted stalin at the Moscow Mongolian Embassy"
+ rp_mon.2.d:0 "Leader of Mongolia,Peljidiin Genden meeted Stalin at the Moscow Mongolian Embassy.And later that night in public drunk Genden shouted at Stalin:'You bloddy Georgian,you have become a virtual Russian Tsar.Then he slapped Stalin and broke his pipe.He also opposed Stalin in the last couple of years.Then he returned to Mongolia."
+ rp_mon.2.a:0 "Oh Crap."
+ 
+ rp_mon.3:0 "Anandyn Amar forgives the Victims of Lkhümbe Affair"
+ rp_mon.3.t:0 "Anandyn Amar forgives the Victims of Lkhümbe Affair"
+ rp_mon.3.d:0 "Anandyn Amar forgives the Victims of Lkhümbe Affair in the 15th year of their revolution.This was a crime made by traitors to the revolution."
+ rp_mon.3.a:0 "That Bastard.We have to purge him."
+ 
+ FLAG_mon_yes_punishment:0 "§YSoviet Union decided to send Choibalsan to defeat Genden§!"
+ idea_mon_lkhumbe_forgived:0 "Victims of Lkhümbe Affair Forgiven"
+ MON_legacy_of_cengiz:0 "Legacy of Genghis Khan"
+ MON_warriors:0 "Legacy of Mongolian Warriors"
+ 
+ MON_power_struggle_cat:0 "Power Struggle"
+ MON_power_struggle_cat_desc:0 "Power of §YAnandyn Amar§!: §O[?power_of_amar|]§!\nPower of §YChoibalsan§!: §O[?power_of_cho|]§!"
+ MON_increase_power_of_cho:0 "Increase the Popularity of Choibalsan"
+ MON_increase_power_of_amar:0 "Increase the Popularity of Anandyn Amar"
+ MON_purge_amar_dec:0 "Purge Amar"
+ MON_stalin_rev:0 "Stalinist Revolution"
+ MON_trotsky_rev:0 "Stalinist Revolution"
+ 
+ MON_increase_cho_tt:0 "§YPopularity§! of §OChoibalsan§! will §Yincrease!§!"
+ MON_increase_amar_tt:0 "§YPopularity§! of §OAnandyn Amar§! will §Yincrease!§!"
+ MON_eliminate_tt:0 "The §OPower Struggle§! between §YAmar§! and §YChoibalsan§! will end."

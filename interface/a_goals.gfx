@@ -1,0 +1,306 @@
+spriteTypes = {	
+
+	SpriteType = {
+	name = "GFX_focus_nukleer"
+	texturefile = "gfx/interface/goals/newicons/focus_nukleer.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_civil"
+	texturefile = "gfx/interface/goals/newicons/focus_civil.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_mussolini"
+	texturefile = "gfx/interface/goals/newicons/focus_mussolini.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_tax"
+	texturefile = "gfx/interface/goals/newicons/focus_tax.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_"
+	texturefile = "gfx/interface/goals/newicons/focus_tax.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_nazi_world"
+	texturefile = "gfx/interface/goals/newicons/nazi_world.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_roman"
+	texturefile = "gfx/interface/goals/newicons/roman.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_washington"
+	texturefile = "gfx/interface/goals/newicons/washington.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_stalin"
+	texturefile = "gfx/interface/goals/newicons/stalin.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_rusayısı"
+	texturefile = "gfx/interface/goals/newicons/rusayısı.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_ataturk"
+	texturefile = "gfx/interface/goals/newicons/ataturk.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_purge"
+	texturefile = "gfx/interface/goals/newicons/purge.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_abdulhamid"
+	texturefile = "gfx/interface/goals/newicons/abdulhamid.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_elections1"
+	texturefile = "gfx/interface/goals/newicons/elections1.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_fevzi"
+	texturefile = "gfx/interface/goals/newicons/fevzi.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_hospital"
+	texturefile = "gfx/interface/goals/newicons/hospital.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_inonu"
+	texturefile = "gfx/interface/goals/newicons/inonu.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_mao"
+	texturefile = "gfx/interface/goals/newicons/mao.dds"			
+	}							
+	SpriteType = {
+	name = "GFX_mil_factory"
+	texturefile = "gfx/interface/goals/newicons/mil_factory.dds"			
+	}								
+	SpriteType = {
+	name = "GFX_napoleon"
+	texturefile = "gfx/interface/goals/newicons/napoleon.dds"			
+	}									
+	SpriteType = {
+	name = "GFX_offensive"
+	texturefile = "gfx/interface/goals/newicons/offensive.dds"			
+	}									
+	SpriteType = {
+	name = "GFX_sign_parliement"
+	texturefile = "gfx/interface/goals/newicons/sign_parliement.dds"			
+	}										
+	SpriteType = {
+	name = "GFX_spy"
+	texturefile = "gfx/interface/goals/newicons/spy.dds"			
+	}										
+	SpriteType = {
+	name = "GFX_wilhelm_2"
+	texturefile = "gfx/interface/goals/newicons/wilhelm_2.dds"			
+	}											
+	SpriteType = {
+	name = "GFX_purge2"
+	texturefile = "gfx/interface/goals/newicons/purge2.dds"			
+	}		
+
+
+
+
+
+#SURIYE	
+	SpriteType = {
+	name = "GFX_syr"
+	texturefile = "gfx/interface/goals/newicons/syr.dds"			
+	}											
+	SpriteType = {
+	name = "GFX_syr2"
+	texturefile = "gfx/interface/goals/newicons/syr2.dds"			
+	}												
+	SpriteType = {
+	name = "GFX_syr3"
+	texturefile = "gfx/interface/goals/newicons/syr3.dds"			
+	}												
+	SpriteType = {
+	name = "GFX_alawiti"
+	texturefile = "gfx/interface/goals/newicons/alawiti.dds"			
+	}																																			
+	SpriteType = {
+	name = "GFX_alawiti_2"
+	texturefile = "gfx/interface/goals/newicons/alawiti_2.dds"			
+	}	
+
+	
+	SpriteType = {
+	name = "GFX_druzes"
+	texturefile = "gfx/interface/goals/newicons/druzes.dds"			
+	}																								
+	SpriteType = {
+	name = "GFX_druzes_2"
+	texturefile = "gfx/interface/goals/newicons/druzes_2.dds"			
+	}
+
+	
+	SpriteType = {
+	name = "GFX_hatay_1"
+	texturefile = "gfx/interface/goals/newicons/hatay_1.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_hatay_2"
+	texturefile = "gfx/interface/goals/newicons/hatay_2.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_hatay_3"
+	texturefile = "gfx/interface/goals/newicons/hatay_3.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_faisal"
+	texturefile = "gfx/interface/goals/newicons/faisal.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_syr_democracy"
+	texturefile = "gfx/interface/goals/newicons/syr_democracy.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_syr_fascism"
+	texturefile = "gfx/interface/goals/newicons/syr_fascism.dds"			
+	}
+	SpriteType = {
+	name = "GFX_irq_syr1"
+	texturefile = "gfx/interface/goals/newicons/irq_syr1.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_irq_syr2"
+	texturefile = "gfx/interface/goals/newicons/irq_syr2.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_lebannon_war"
+	texturefile = "gfx/interface/goals/newicons/lebannon_war.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_guarantee_leb"
+	texturefile = "gfx/interface/goals/newicons/guarantee_leb.dds"			
+	}		
+	SpriteType = {
+	name = "GFX_greater_syr"
+	texturefile = "gfx/interface/goals/newicons/greater_syr.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_syr_ger"
+	texturefile = "gfx/interface/goals/newicons/syr_ger.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_mongolia1"
+	texturefile = "gfx/interface/goals/newicons/mongolia1.dds"			
+	}			
+	SpriteType = {
+	name = "GFX_mongolia2"
+	texturefile = "gfx/interface/goals/newicons/mongolia2.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia3"
+	texturefile = "gfx/interface/goals/newicons/mongolia3.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia4"
+	texturefile = "gfx/interface/goals/newicons/mongolia4.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia5"
+	texturefile = "gfx/interface/goals/newicons/mongolia5.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia6"
+	texturefile = "gfx/interface/goals/newicons/mongolia6.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_mongolia7"
+	texturefile = "gfx/interface/goals/newicons/mongolia7.dds"			
+	}				
+	SpriteType = {
+	name = "GFX_mongolia8"
+	texturefile = "gfx/interface/goals/newicons/mongolia8.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_mongolia9"
+	texturefile = "gfx/interface/goals/newicons/mongolia9.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_moneconomic"
+	texturefile = "gfx/interface/goals/newicons/moneconomic.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_monsov1"
+	texturefile = "gfx/interface/goals/newicons/monsov1.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_monsov2"
+	texturefile = "gfx/interface/goals/newicons/monsov2.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_mon_deal_with_jap"
+	texturefile = "gfx/interface/goals/newicons/mon_deal_with_jap.dds"			
+	}					
+	SpriteType = {
+	name = "GFX_ikili_cengiz"
+	texturefile = "gfx/interface/goals/newicons/ikili/cengiz.dds"			
+	}						
+	SpriteType = {
+	name = "GFX_ikili_atli"
+	texturefile = "gfx/interface/goals/newicons/ikili/atli.dds"			
+	}			
+
+
+
+
+
+
+
+
+
+
+
+SpriteType = { 
+		name = "GFX_goal_legal_way"
+		texturefile = "gfx/interface/goals/TUR/GFX_legal_way.dds"
+	}
+	SpriteType = { 
+		name = "GFX_new_party"
+		texturefile = "gfx/interface/goals/TUR/GFX_new_party.dds"
+	}
+	SpriteType = { 
+		name = "GFX_tur_propaganda"
+		texturefile = "gfx/interface/goals/TUR/GFX_tur_propaganda.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_coup"
+		texturefile = "gfx/interface/goals/TUR/GFX_tur_coup.dds"
+	}
+	SpriteType = { 
+		name = "GFX_TUR_Civ"
+		texturefile = "gfx/interface/goals/TUR/GFX_TUR_Civ.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_goal_seats"
+		texturefile = "gfx/interface/goals/TUR/GFX_seats.dds"
+	}
+	SpriteType = { 
+		name = "GFX_new_party"
+		texturefile = "gfx/interface/goals/TUR/GFX_new_party.dds"
+	}
+	SpriteType = { 
+		name = "GFX_tur_propaganda"
+		texturefile = "gfx/interface/goals/TUR/GFX_tur_propaganda.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_coup"
+		texturefile = "gfx/interface/goals/TUR/GFX_tur_coup.dds"
+	}
+	SpriteType = { 
+		name = "GFX_TUR_Civ"
+		texturefile = "gfx/interface/goals/TUR/GFX_TUR_Civ.dds"
+	}	
+	spriteType = {
+		name = "GFX_modifiers_kuvayimilliye_dyn"
+		textureFile = "gfx/interface/state_modifiers/kuvayimilliye_icon.dds"
+	}
+	
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=861
+	name="Alawiti"
+	manpower = 5471
+	
+	state_category = rural
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ALA
+
+	}
+
+
+	provinces={
+		10087 1088
+	}
+}

@@ -1,0 +1,22 @@
+
+state={
+	id=860
+	name="Jabal al-Druze"
+	manpower = 2105
+	
+	state_category = rural
+
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = JBA	
+
+	}
+
+
+	provinces={
+		4486 7184
+	}
+}

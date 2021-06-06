@@ -1,0 +1,767 @@
+focus_tree = {
+	id = mongolia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = MON
+		}
+	}
+	
+		default = no
+		reset_on_civilwar = no
+		
+	continuous_focus_position = { x = 0 y = 1000 }	
+		
+	shared_focus = ABC_establish_a_general_staff	
+	shared_focus = GEN_Aviation_Effort
+	shared_focus = GEN_Naval_Effort
+	shared_focus = GEN_Industrial_Start
+	shared_focus = GEN_Industrial_Boom
+	
+	focus = {
+		id = MON_aftermath_of_gendens_visit_to_moscow
+		icon = GFX_mongolia1
+		x = 52
+		y = 0
+		available = {
+		always = no
+		}
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			SOV = { country_event = { id = rp_mon.1 hours 12 } }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = MON_support_choibalsan
+		icon = GFX_mongolia3
+		x = -4
+		y = 1
+		available = {
+		has_country_flag = FLAG_mon_yes_punishment
+		SOV = {has_completed_focus = SOV_great_purge}
+		}
+		prerequisite = {
+		focus = MON_aftermath_of_gendens_visit_to_moscow
+		}
+		mutually_exclusive = {
+		focus = MON_support_genden
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			set_politics = {
+	ruling_party = communism
+	elections_allowed = no
+}
+		MON = {
+		set_variable = { var = power_of_cho value = 30 }
+		set_variable = { var = power_of_amar value = 70 }
+		}
+		SOV = {
+		set_variable = { var = power_of_cho value = 30 }
+		set_variable = { var = power_of_amar value = 70 }
+		}
+		}
+		relative_position_id = MON_aftermath_of_gendens_visit_to_moscow
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	#CHOIBALSAN
+	focus = {
+		id = MON_appoint_choibalsan
+		icon = GFX_mongolia3
+		x = -2
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_support_choibalsan
+		}
+		mutually_exclusive = {
+		focus = MON_appoint_amar
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		create_country_leader = {
+	name = "Khorloogiin Choibalsan"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/cho.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+		}
+		}
+		SOV = {
+		set_autonomy = {
+		target = MON
+		autonomy_state = autonomy_puppet
+		}	
+		}
+		}
+		relative_position_id = MON_support_choibalsan
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_eliminate_amar_supporters
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = 0
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_appoint_choibalsan
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		custom_effect_tooltip = MON_eliminate_tt
+		}
+		relative_position_id = MON_appoint_choibalsan
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_strenghten_economic_ties_with_ussr
+		icon = GFX_moneconomic
+		x = -1
+		y = 2
+		available = {
+		controls_state = 330
+		controls_state 849
+		}
+		prerequisite = {
+		focus = MON_eliminate_amar_supporters
+		focus = MON_amar_gets_purged
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		330 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+		}
+		}
+		849 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+		}
+		}
+		}
+		relative_position_id = MON_eliminate_amar_supporters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_strenghten_military_ties_with_ussr
+		icon = GFX_mongolia9
+		x = 1
+		y = 2
+		available = {
+		}
+		prerequisite = {
+		focus = MON_eliminate_amar_supporters
+		focus = MON_amar_gets_purged
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		SOV = {
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 5000
+    target = MON
+}
+}
+		}
+		relative_position_id = MON_eliminate_amar_supporters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_declare_semi_independence
+		icon = GFX_monsov1
+		x = 0
+		y = 3
+		available = {
+		}
+		prerequisite = {
+		focus = MON_strenghten_economic_ties_with_ussr
+		}
+		prerequisite = {
+		focus = MON_strenghten_military_ties_with_ussr
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		SOV = {
+		end_puppet = MON
+		}
+		}
+		relative_position_id = MON_eliminate_amar_supporters
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	#AMAR
+	focus = {
+		id = MON_appoint_amar
+		icon = GFX_mongolia4
+		x = 2
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_support_choibalsan
+		}
+		mutually_exclusive = {
+		focus = MON_appoint_choibalsan
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			create_country_leader = {
+	name = "Anandyn Amar"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/portrait_mon_anandyn_amar.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+		}
+		}
+		}
+		relative_position_id = MON_support_choibalsan
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_forgive_the_victims_of_lkhumbe_affair
+		icon = GFX_mongolia7
+		x = 0
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_appoint_amar
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		add_ideas = idea_mon_lkhumbe_forgived
+		}
+		relative_position_id = MON_appoint_amar
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_increase_the_popularity_of_amar
+		icon = GFX_mongolia4
+		x = 0
+		y = 1
+		available = {
+		NOT = {
+		has_completed_focus = MON_amar_gets_purged
+		}
+		}
+		prerequisite = {
+		focus = MON_forgive_the_victims_of_lkhumbe_affair
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		MON = {
+		add_to_variable = {
+		var = power_of_cho
+		value = -10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = 10
+		}
+		}
+		SOV = {
+		add_to_variable = {
+		var = power_of_cho
+		value = -10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = 10
+		}
+		}
+		custom_effect_tooltip = MON_increase_amar_tt
+		}
+		relative_position_id = MON_forgive_the_victims_of_lkhumbe_affair
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_anti_stalinist_campaign
+		icon = GFX_stalin
+		x = 0
+		y = 1
+		available = {
+		NOT = {
+		has_completed_focus = MON_amar_gets_purged
+		}
+		}
+		prerequisite = {
+		focus = MON_increase_the_popularity_of_amar
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		custom_effect_tooltip = MON_increase_amar_tt
+		MON = {
+		add_to_variable = {
+		var = power_of_cho
+		value = -10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = 10
+		}
+		}
+		SOV = {
+		add_to_variable = {
+		var = power_of_cho
+		value = -10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = 10
+		}
+		}
+		}
+		relative_position_id = MON_increase_the_popularity_of_amar
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_broke_the_soviet_mongolian_alliance
+		icon = GFX_mongolia8
+		x = 0
+		y = 1
+		available = {
+		NOT = {
+		has_completed_focus = MON_amar_gets_purged
+		}
+		}
+		prerequisite = {
+		focus = MON_anti_stalinist_campaign
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		if = {
+		limit = {is_in_faction_with = SOV}
+		leave_faction = yes
+		}
+		custom_effect_tooltip = MON_eliminate_tt
+		remove_ideas = MON_soviet_influence
+		}
+		relative_position_id = MON_anti_stalinist_campaign
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	
+	focus = {
+		id = MON_amar_gets_purged
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		x = -2
+		y = 1
+		available = {
+		always = no
+		}
+		prerequisite = {
+		focus = MON_forgive_the_victims_of_lkhumbe_affair
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		retire_ideology_leader = communism
+		create_country_leader = {
+	name = "Khorloogiin Choibalsan"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/cho.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+	}
+	}
+
+		}
+		relative_position_id = MON_forgive_the_victims_of_lkhumbe_affair
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	#SAG TARAF ALT HISTORY
+	focus = {
+		id = MON_support_genden
+		icon = GFX_mongolia2
+		x = 4
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_aftermath_of_gendens_visit_to_moscow
+		}
+		mutually_exclusive = {
+		focus = MON_support_choibalsan
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		remove_ideas = MON_soviet_influence
+			set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+add_popularity = {
+    ideology = neutrality
+    popularity = 0.4
+}
+		}
+		relative_position_id = MON_aftermath_of_gendens_visit_to_moscow
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_peacefull_revolution
+		icon = GFX_mongolia6
+		x = -1
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_broke_the_soviet_mongolian_alliance
+		focus = MON_declare_semi_independence
+		}
+		mutually_exclusive = {
+		focus = MON_stalinist_revolution
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		add_ideas = MON_peacefull_rev	
+		}
+		relative_position_id = MON_broke_the_soviet_mongolian_alliance
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_stalinist_revolution
+		icon = GFX_mongolia6
+		x = -4
+		y = 1
+		available = {
+		SOV = {
+		OR = {
+		has_completed_focus = SOV_great_purge
+		has_completed_focus = SOV_trotskyite_victory
+		}
+		}
+		}
+		prerequisite = {
+		focus = MON_declare_semi_independence
+		}
+		mutually_exclusive = {
+		focus = MON_peacefull_revolution
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		if = {
+		limit = {SOV = {has_country_leader = {name = "Joseph Stalin" ruling_only = yes}}}
+		add_ideas = MON_stalin_rev
+		}
+		if = {
+		limit = {SOV = {has_country_leader = {name = "Leon Trotsky" ruling_only = yes}}}
+		add_ideas = MON_trotsky_rev
+		}
+		}
+		relative_position_id = MON_broke_the_soviet_mongolian_alliance
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	#VERY ALT HIST GENDEN STUFF
+	focus = {
+		id = MON_dreams_of_a_greater_mongolia
+		icon = GFX_mongolia5
+		x = 0
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_support_genden
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		add_ideas = MON_dreams_of_greater_mon
+		}
+		relative_position_id = MON_support_genden
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_send_an_embassador_to_japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		x = -2
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_dreams_of_a_greater_mongolia
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		JAP = { country_event = { id = rp_mon.7 hours 12} }
+		}
+		relative_position_id = MON_dreams_of_a_greater_mongolia
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_deal_for_inner_mongolia
+		icon = GFX_mon_deal_with_jap
+		x = 0
+		y = 1
+		available = {
+		has_country_flag = JAP_MON_elci_accept	
+		}
+		prerequisite = {
+		focus = MON_send_an_embassador_to_japan
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		JAP = { country_event = { id = rp_mon.8 hours = 12} }
+		}
+		relative_position_id = MON_send_an_embassador_to_japan
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_join_jap_faction
+		icon = GFX_focus_jap_pacific_guardian
+		x = 0
+		y = 1
+		available = {
+		has_global_flag = JAP_MON_inner_accept
+		is_in_faction = yes
+		}
+		prerequisite = {
+		focus = MON_deal_for_inner_mongolia
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		JAP = { country_event = { id = generic.2 hours = 12} }
+		}
+		relative_position_id = MON_deal_for_inner_mongolia
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = MON_deal_for_tannu_tuva
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 2
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_dreams_of_a_greater_mongolia
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		SOV = { country_event = { id = rp_mon.4 hours = 12 } }	
+		}
+		relative_position_id = MON_dreams_of_a_greater_mongolia
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = MON_legacy_of_genghis_khan
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_deal_for_tannu_tuva
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		add_ideas = MON_legacy_of_cengiz
+		}
+		relative_position_id = MON_deal_for_tannu_tuva
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = MON_legacy_of_mongolian_wariors
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 1
+		available = {
+		}
+		prerequisite = {
+		focus = MON_deal_for_tannu_tuva
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+	    add_ideas = MON_warriors
+		}
+		relative_position_id = MON_deal_for_tannu_tuva
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	
+	focus = {
+		id = MON_embrace_buddhism
+		icon = GFX_focus_smiling_buddha
+		x = 0
+		y = 2
+		available = {
+		}
+		prerequisite = {
+		focus = MON_legacy_of_mongolian_wariors
+		}
+		prerequisite = {
+		focus = MON_legacy_of_genghis_khan
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+	    add_popularity = {
+    ideology = neutrality
+    popularity = 0.3
+}
+		}
+		relative_position_id = MON_deal_for_tannu_tuva
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = MON_proclaim_greater_mongolia
+		icon = GFX_mongolia5
+		x = -2
+		y = 3
+		available = {
+		}
+		prerequisite = {
+		focus = MON_join_jap_faction
+		}
+		prerequisite = {
+		focus = MON_embrace_buddhism
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = MON_dreams_of_greater_mon
+		add_idea = MON_greater_mon
+		}
+		}
+		relative_position_id = MON_deal_for_tannu_tuva
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}

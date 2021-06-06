@@ -1,0 +1,165 @@
+ideas = {
+	
+		country = {
+
+		idea_mon_lkhumbe_forgived = {
+
+
+			picture = lkhumbe
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.15
+			}
+		}
+
+		MON_stalin_rev = {
+
+
+			picture = monrev
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				local_non_core_manpower = 0.25
+				stability_factor = -0.2
+				war_support_factor = 0.2
+			}
+		}
+
+		MON_peacefull_rev = {
+
+
+			picture = monrev
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.35
+				justify_war_goal_time = -0.5
+			}
+		}
+
+		MON_legacy_of_cengiz = {
+
+
+			picture = cengiz
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.25
+			}
+		}
+
+		MON_warriors = {
+
+
+			picture = mon_warriors
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.10
+			}
+		}
+
+		MON_dreams_of_greater_mon = {
+
+
+			picture = mon_greater_mon
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				cavalry_attack_factor = 0.2
+			}
+		}
+
+		MON_greater_mon = {
+
+
+			picture = mon_greater_mon
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.25
+				stability_factor = 0.15
+				cavalry_attack_factor = 0.4
+			}
+		}
+
+		MON_soviet_influence = {
+
+
+			picture = mon_sov_inf
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				SOV = {
+				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.5
+				}
+				set_rule = {
+		can_join_factions = no
+		}
+				set_rule = {
+		can_create_factions = no
+		}
+			}
+		}
+	}
+}

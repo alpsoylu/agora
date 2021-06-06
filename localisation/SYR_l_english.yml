@@ -1,0 +1,203 @@
+﻿l_english:
+
+ #events
+ rp_syr.1:0 "Viénot Accords"
+ rp_syr.1.t:0 "Franco Syrian Treaty of Independence"
+ rp_syr.1.d:0 "For the last months French and Syrian delegates were negotiating in Paris.The negotiations started in March 1936.And now it has come to an end.Today the Syrian and French Delegates have aggreed on a treaty which will grant Syria independence."
+ rp_syr.1.a:0 "For Greater Syria!"
+ 
+ rp_syr.2:0 "Syria annexes Hatay"
+ rp_syr.2.t:0 "Syria annexes Hatay"
+ rp_syr.2.d:0 "The newly independent Republic of Syria annexed the state of Alexandretta.What should we do about it?"
+ rp_syr.2.a:0 "Hatay is our land.We will DIE for it!"
+ rp_syr.2.b:0 "It's just a piece of land!"
+ 
+ rp_syr.3:0 "Turkey attacks Alexandretta"
+ rp_syr.3.t:0 "Turkey attacks Alexandretta"
+ rp_syr.3.d:0 "Turkey is attacking our territory,Alexandretta.They claimed the land for 20 years and now they want it back!"
+ rp_syr.3.a:0 "Then we will fight!"
+ 
+ rp_syr.4:0 "Our Soldiers have secured Hatay."
+ rp_syr.4.t:0 "Our Soldiers have secured Hatay."
+ rp_syr.4.d:0 "Our Soldiers entered Hatay.The citizens are very happy and they are now celebrating in the streets with the soldiers.Now it is time to establish order in the city."
+ rp_syr.4.a:0 "Hatay is and always will be TURKISH!"
+ 
+ rp_syr.5:0 "Our Soldiers were defeated in Hatay."
+ rp_syr.5.t:0 "Our Soldiers were defeated in Hatay."
+ rp_syr.5.d:0 "Syrian soldiers have defeated our army in our offensive for Hatay.Our soldiers are now stepping back to our first locations."
+ rp_syr.5.a:0 "A little step back."
+ 
+ rp_syr.6:0 "Turkish Soldiers have secured Alexandretta."
+ rp_syr.6.t:0 "Turkish Soldiers have secured Alexandretta."
+ rp_syr.6.d:0 "Turkish Soldiers entered Alexandretta.The citizens are very happy and they are now celebrating in the streets with the soldiers.This is a big defeat for us."
+ rp_syr.6.a:0 "Sadly,once again the bully won."
+ 
+ rp_syr.7:0 "Our Soldiers defeated Turkish Soldiers in Alexandretta."
+ rp_syr.7.t:0 "Our Soldiers defeated Turkish Soldiers in Alexandretta."
+ rp_syr.7.d:0 "Syrian soldiers have defeated the Turkish army in their offensive for Alexandretta.This is our glorious victory."
+ rp_syr.7.a:0 "For Greater Syria!"
+ 
+ rp_syr.7:0 "Our Soldiers defeated Turkish Soldiers in Alexandretta."
+ rp_syr.7.t:0 "Our Soldiers defeated Turkish Soldiers in Alexandretta."
+ rp_syr.7.d:0 "Syrian soldiers have defeated the Turkish army in their offensive for Alexandretta.This is our glorious victory."
+ rp_syr.7.a:0 "For Greater Syria!"
+ 
+ rp_syr.8:0 "Syria wants to create a union between our countries."
+ rp_syr.8.t:0 "Syria wants to create a union between our countries."
+ rp_syr.8.d:0 "The newly founded Kingdom of Syria wants to create a union between our country Iraq and Syria.How should we answer?"
+ rp_syr.8.a:0 "For the Arab world to unite,this is a Huge Step!§OAll the Iraqi Players will change to Syria§!"
+ rp_syr.8.b:0 "No!We will not give away our independence!"
+ 
+ rp_syr.9:0 "Syria wants recognition of their independence from us."
+ rp_syr.9.t:0 "Syria wants recognition of their independence from us."
+ rp_syr.9.d:0 "Syria asks for recognition of their independence!"
+ rp_syr.9.a:0 "We will accept."
+ rp_syr.9.b:0 "We will reject."
+ 
+ rp_syr.14:0 "Syria wants recognition of their independence from us."
+ rp_syr.14.t:0 "Syria wants recognition of their independence from us."
+ rp_syr.14.d:0 "Syria asks for recognition of their independence!They have recently gained (sort of) independence from France and they are looking for recognition"
+ rp_syr.14.a:0 "Guarantee their independence."
+ rp_syr.14.B:0 "Syria,who?."
+ 
+ 
+ rp_syr.16:0 "Vichy France occupies Syria"
+ rp_syr.16.t:0 "Vichy France occupies Syria"
+ rp_syr.16.d:0 "We will now continue under Vichy Administration."
+ rp_syr.16.a:0 "Damn it!"
+ 
+ 
+ rp_syr.15:0 "Syria signs the Vienot Accords"
+ rp_syr.15.t:0 "Syria signs the Vienot Accords"
+ rp_syr.15.d:0 "Republic of Syria under French Mandate of Syria and Lebanon has agreed on a deal with the French delegates.Republic of Syria will get their independence and France will withdraw from theirr Middle Eastern Colonies.The National Bloc will set up a democratic regime in Syria.And Hashim al-Atassi will become the President of Syria.The delegates have also agreed on Lebanese independence too."
+ rp_syr.15.a:0 "Ok."
+ 
+ SYR_IRQ_accept:0 "§YIraq has accepted and recognised the independence of Syria§!"
+ SYR_IRQ_reject:0 "§YIraq has rejected the Syrian proposal for them to recognise the Syrian Independence§!"
+ 
+ SYR_franco_syrian_treaty:0 "Franco-Syrian Treaty"
+ SYR_united_we_are_stronger:0 "United we are stronger!"
+ SYR_divided_we_are_stronger:0 "Situation of Minorities!"
+ SYR_united_we_are_stronger_desc:0 "By uniting all the levant,we can become stronger!For Syria!"
+ SYR_divided_we_are_stronger_desc:0 "We should decide the situation of minorities inside our republic!"
+ autonomy_influenced_state:0 "Influenced State"
+ idea_divided_syr:0 "Divided Syria"
+ idea_united_syr:0 "United Syria"
+ SYR_conquer_lebannon:0 "Conquer Lebanon"
+ 
+ SYR_dangerous_tt:0 "This might get §Ydangerous for our country§!.Because §CFrance§! might not respect our decision of changing ideology and §Oturn against us§!!"
+ 
+ SYR_fra_protect_tt:0 "A §Owar§! is coming.We will stay under §CFrench§! §YProtection§! and §CDemocracy§! to stay alive."
+ SYR_fasc_request_recognition_from_germany:0 "Request Recognition from Germany"
+ 
+ 
+ 
+ rp_syr.13:0 "Syria Announces Full Sovereignty from France"
+ rp_syr.13.d:0 "With the changing of the regime in Syria.They now announced that no intervention could be made to Syria by France.And they were now fully independent"
+ rp_syr.13.t:0 "Syria Announces Full Sovereignty from France"
+ rp_syr.13.a:0 "We never approved this deal.Punish them!"
+ rp_syr.13.b:0 "Good for them.Leaving the middle east was a good choice"
+ 
+ 
+ 
+ 
+ rp_syr.10:0 "Syria requests the control of  Kuwait Transjordan and Palestine."
+ rp_syr.10.t:0 "Syria requests the control of  Kuwait Transjordan and Palestine."
+ rp_syr.10.d:0 "Syria requests the control of  Kuwait Transjordan andPalestine.What should we do?"
+ rp_syr.10.a:0 "Give it to them."
+ rp_syr.10.b:0 "No.Never!Those teritorie are ours."
+ 
+ rp_syr.11:0 "[From.GetNameDef] has accepted our demands!"
+ rp_syr.11.t:0 "[From.GetNameDef] has accepted our demands!"
+ rp_syr.11.d:0 "[From.GetNameDef] has accepted our demands for Kuwait Transjordan and Palestine."
+ rp_syr.11.a:0 "Delightfull!"
+ 
+ rp_syr.12:0 "[From.GetNameDef] has rejected our demands!"
+ rp_syr.12.t:0 "[From.GetNameDef] has rejected our demands!"
+ rp_syr.12.d:0 "[From.GetNameDef] has rejected our demands for Kuwait Transjordan and Palestine."
+ rp_syr.12.a:0 "Damn!"
+ 
+ SYR_request_british_territories:0 "Request British Territories"
+ SYR_fasc_request_british_territories:0 "Request British Territories"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ SYR_mandate:0 "French Mandate of Syria and Lebanon"
+ SYR_mandate_DEF:0 "French Mandate of Syria and Lebanon"
+ SYR_mandate_ADJ:0 "Levantine"
+ 
+
+ ALA:0 "Alawite State"
+ ALA_DEF:0 "Alawite State"
+ ALA_ADJ:0 "Alawiti"
+
+ JBA:0 "Jabal al-Druze"
+ JBA_DEF:0 "Jabal al-Druze"
+ JBA_ADJ:0 "Druze"
+ 
+ HAT:0 "Hatay Republic"
+ HAT_DEF:0 "Hatay Republic"
+ HAT_ADJ:0 "Turkish"
+ 
+ ALA_mandate:0 "Alawiti State"
+ ALA_mandate_DEF:0 "Alawiti State"
+ ALA_mandate_ADJ:0 "Alawiti"
+ 
+ SYR_release_the_alawitis:0 "Release the Alawitis"
+ SYR_integrate_the_alawitis:0 "Integrate the Alawitis"
+ SYR_release_the_alawitis_desc:0 "Release the Alawitis"
+ SYR_integrate_the_alawitis_desc:0 "Integrate the Alawitis"
+ SYR_release_the_druzes:0 "Release the Druzes"
+ SYR_integrate_the_druzes:0 "Integrate the Druzes"
+ SYR_release_the_druzes_desc:0 "Release the Druzes"
+ SYR_integrate_the_druzes_desc:0 "Integrate the Druzes"
+ SYR_annex_alexandreta:0 "Annex Alexandretta"
+ SYR_annex_alexandreta_desc:0 "We should annex the region of Alexandretta which is populated by Turks and Alawitis"
+ SYR_autonomus_region_of_alexandretta:0 "Autonomus Region of Alexandretta"
+ SYR_autonomus_region_of_alexandretta_desc:0 "Create an Autonomus region in Alexandretta"
+ SYR_give_hatay_to_turkey:0 "Independent Republic of Hatay"
+ SYR_give_hatay_to_turkey_desc:0 "We should give Turkish Populated Hatay to the Turkish people"
+ 
+ 
+ 
+ SYR_political_direction:0 "Political Direction"
+ SYR_legacy_of_faisal:0 "Legacy of Faisal I"
+ SYR_request_recognition_from_iraq:0 "Request Recognition from Iraq"
+ SYR_iraqi_conquest:0 "Iraqi Conquest"
+ SYR_union_with_iraq:0 "Union with Iraq"
+ SYR_continue_with_the_republic:0 "Continue with the Republic"
+ SYR_form_the_syrian_national_council:0 "Form the Syrian National Movement"
+ SYR_political_direction_desc:0 "Political Direction"
+ SYR_legacy_of_faisal_desc:0 "Legacy of Faisal I"
+ SYR_request_recognition_from_iraq_desc:0 "Request Recognition from Iraq"
+ SYR_iraqi_conquest_desc:0 "Iraqi Conquest"
+ SYR_union_with_iraq_desc:0 "Union with Iraq"
+ SYR_continue_with_the_republic_desc:0 "Continue with the Republic"
+ SYR_form_the_syrian_national_council_desc:0 "Form the Syrian National Movement"
+ idea_legacy_faisal_syr:0 "Legacy of Faisal I"
+ 
+ SYR_fasc_request_recognition_from_iraq:0 "Request Recognition from Iraq"
+ SYR_fasc_iraqi_conquest:0 "Iraqi Conquest"
+ SYR_fasc_union_with_iraq:0 "Union with Iraq"
+ SYR_fasc_conquer_lebannon:0 "Conquer Lebanon"
+ idea_greater_syria:0 "Greater Syria"
+ idea_syr_for_democracy:0 "For Democracy"
+ 
+ SYR_join_comintern:0 "Join Comintern"
+ SYR_join_axis:0 "Join Axis"
+ SYR_join_allies:0 "Join Allies"
+
+ 
+ SYR_strenghten_democracy:0 "Strenghten Democracy"
+ SYR_respect_the_independence_of_lebannon:0 "Respect Independence of Lebanon"
+ SYR_annexation_of_lebanon:0 "Attack Lebanon"
+ SYR_for_democracy:0 "For Democracy"
+ SYR_greater_syria:0 "Greater Syria"

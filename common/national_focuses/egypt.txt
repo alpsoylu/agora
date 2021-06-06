@@ -1,0 +1,198 @@
+focus_tree = {
+    id = egypt_focus
+    
+    country = {
+        factor = 0
+        
+        modifier = {
+            add = 10
+            tag = EGY
+        }
+    }
+
+    continuous_focus_position = { x = 0 y = 1000 }
+
+    focus = {
+        id = EGY_cairo_civil_works
+        icon = GFX_focus_generic_industry_2
+        x = 2
+        y = 0
+        cost = 5
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+        completion_reward = {
+            if = {
+                limit = { has_full_control_of_state = 446 }
+                446 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+    focus = {
+        id = EGY_cairo_research_center
+        icon = GFX_focus_research
+        prerequisite = { focus = EGY_cairo_civil_works }
+        relative_position_id = EGY_cairo_civil_works
+        x = 0 
+        y = 1
+        cost = 10
+        search_filters = {FOCUS_FILTER_RESEARCH}
+        completion_reward = {
+            add_research_slot = 1
+        }
+    }
+    focus = {
+        id = EGY_industrial_modernization
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = EGY_cairo_research_center }
+        mutually_exclusive = { focus = EGY_private_banking }
+        relative_position_id = EGY_cairo_research_center
+        x = 1
+        y = 2
+        cost = 10
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+        completion_reward = {
+            add_tech_bonus = {
+                name = EGY_industrial_modernization
+                bonus = 1.00
+                uses = 2
+                category = industry
+            }
+        }
+    }
+    focus = { 
+        id = EGY_private_banking
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = EGY_cairo_research_center }
+        mutually_exclusive = { focus = EGY_industrial_modernization }
+        relative_position_id = EGY_cairo_research_center
+        x = 4
+        y = 2
+        cost = 10
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+        completion_reward = {
+            if = {
+                limit = { has_full_control_of_state = 447}
+                447= {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+    focus = {
+	    id = EGY_arabic_workers
+	    icon = GFX_focus_generic_industry_2
+	    prerequisite = { focus = EGY_industrial_modernization }
+	    relative_position_id = EGY_industrial_modernization
+	    x = 0
+	    y = 1
+	    cost = 10
+	    search_filters = {FOCUS_FILTER}
+	    completion_reward = {
+            add_ideas = EGY_arabic_workers_idea
+	    }
+	}
+    focus = {
+        id = EGY_banking_investments
+        icon = GFX_focus_generic_industry_2
+        prerequisite = { focus = EGY_private_banking }
+        relative_position_id = EGY_private_banking
+        x = 0
+        y = 1
+        cost = 10
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+        completion_reward = {
+            if = {
+                limit = { has_full_control_of_state = 456}
+                456= {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+            }
+        }
+    }
+    focus = {
+	    id = EGY_back_to_roots
+	    icon = GFX_focus_generic_industry_2
+	    mutually_exclusive = { focus = EGY_stay_with_uk } 
+	    relative_position_id = EGY_stay_with_uk
+	    x = 4
+	    y = 0
+	    cost = 10
+	    search_filters = {FOCUS_FILTER_POLITICAL}
+	    completion_reward = {
+	        add_ideas = EGY_break_free  
+	    }
+	}
+	focus = {
+	    id = EGY_stay_with_uk
+	    icon = GFX_focus_generic_industry_2
+	    mutually_exclusive = { focus = EGY_back_to_roots }
+	    x = 10
+	    y = 0
+	    cost = 10
+	    search_filters = {FOCUS_FILTER_POLITICAL}
+	    completion_reward = {
+	        add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+	    }
+	}
+	focus = {
+	    id = EGY_royalist_way
+	    icon = GFX_focus_generic_industry_2
+	    prerequisite = { focus = EGY_back_to_roots }
+	    mutually_exclusive = { focus = EGY_fascist_way focus = EGY_communist_way }
+	    relative_position_id = EGY_back_to_roots
+	    x = 0
+	    y = 1
+	    cost = 10
+	    search_filters = {FOCUS_FILTER_POLITICAL}
+	    completion_reward = {
+	        add_ideas = EGY_royalist_way_idea
+	    }
+	}
+	focus = {
+	    id = EGY_fascist_way
+	    icon = GFX_focus_generic_industry_2
+	    prerequisite = { focus = EGY_back_to_roots }
+	    mutually_exclusive = { focus = EGY_royalist_way focus = EGY_communist_way}
+	    relative_position_id = EGY_royalist_way 
+	    x = 4
+	    y = 0
+	    cost = 10
+	    search_filters = {FOCUS_FILTER_POLITICAL}
+	    completion_reward = {
+	        add_ideas = EGY_fascist_way_idea
+	    }
+	}
+	focus = {
+	    id = EGY_communist_way
+	    icon = GFX_focus_generic_industry_2
+	    prerequisite = { focus = EGY_back_to_roots }ü
+	    mutually_exclusive = { focus = EGY_royalist_way focus = EGY_fascist_way }
+	    relative_position_id = EGY_fascist_way
+	    x = 4
+	    y = 0
+	    cost = 10
+	    search_filters = {FOCUS_FILTER_POLITICAL}
+	    completion_reward = {
+	        add_ideas = EGY_communist_way_idea
+	    }
+	}
+}

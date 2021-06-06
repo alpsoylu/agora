@@ -1,0 +1,263 @@
+﻿###########################
+# Mongol Events
+###########################
+
+add_namespace = rp_mon
+
+	
+	
+	
+	
+#ASK SOV DRUNK GENDEN
+country_event = {
+	id = rp_mon.1
+	title = rp_mon.1.t
+	desc = rp_mon.1.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#HE WAS JUST DRUNK
+	option = {
+	ai_chance = {base = 0}
+	name = rp_mon.1.a
+	set_country_flag = FLAG_mon_no_punishment
+	}
+	
+	#THAT TRAITOR ORDER CHOIBALSAN TO DEFEAT HIM
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.1.b
+	set_country_flag = FLAG_mon_yes_punishment
+	}
+}
+	
+#MON DRUNK GENDEN
+country_event = {
+	id = rp_mon.2
+	title = rp_mon.2.t
+	desc = rp_mon.2.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#HE WAS JUST DRUNK
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.2.a
+	complete_national_focus = MON_aftermath_of_gendens_visit_to_moscow
+	}
+}
+	
+#AMAR FORGIVES CRIMINALS
+country_event = {
+	id = rp_mon.3
+	title = rp_mon.3.t
+	desc = rp_mon.3.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#WE HAVE TO PURGE HIM
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.3.a
+	}
+}
+	
+#MON WANTS TANU TUVA
+country_event = {
+	id = rp_mon.4
+	title = rp_mon.4.t
+	desc = rp_mon.4.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#GIVE IT TO THEM
+	option = {
+	ai_chance = {base = 0 modifier = { MON = {is_in_faction = yes add = 100 }} }
+	name = rp_mon.4.a
+	MON = { country_event = { id = rp_mon.5 } }
+	diplomatic_relation = {
+    country = MON
+    relation = non_aggression_pact
+    active = yes
+}
+	}
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.4.b
+	MON = { country_event = { id = rp_mon.6 } }
+	}
+}
+	
+#SOV ACCEPTS TANU TUVA
+country_event = {
+	id = rp_mon.5
+	title = rp_mon.5.t
+	desc = rp_mon.5.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#GOOD
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.5.a
+	MON = {transfer_state = 329 
+	add_state_core = 329}
+	}
+}
+	
+#SOV REJECTS TANU TUVA
+country_event = {
+	id = rp_mon.6
+	title = rp_mon.6.t
+	desc = rp_mon.6.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#GOOD
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.6.a
+	MON = {add_state_claim = 329}
+	}
+}
+	
+#Mongolia wants to send an embassador to Tokyo
+country_event = {
+	id = rp_mon.7
+	title = rp_mon.7.t
+	desc = rp_mon.7.d
+	picture = GFX_report_event_FDR_speech
+	
+	is_triggered_only = yes
+	
+	#ACCEPT
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.7.a
+	set_country_flag = JAP_MON_elci_accept
+	}
+	#REJECT
+	option = {
+	ai_chance = {base = 0}
+	name = rp_mon.7.b
+	set_country_flag = JAP_MON_elci_reject
+	}
+}
+	
+#INNER MONGOLIA
+country_event = {
+	id = rp_mon.8
+	title = rp_mon.8.t
+	desc = rp_mon.8.d
+	picture = GFX_innermon
+	
+	is_triggered_only = yes
+	
+	#ACCEPT
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.8.a
+	set_global_flag = JAP_MON_inner_accept
+	MON = { country_event = { id = rp_mon.9 } }
+	add_opinion_modifier = { target = MON modifier = large_increase }
+	}
+	#REJECT
+	option = {
+	ai_chance = {base = 0}
+	name = rp_mon.8.b
+	set_global_flag = JAP_MON_inner_reject
+	MON = { country_event = { id = rp_mon.10 } }
+	}
+}
+	
+#KEYIFLI
+country_event = {
+	id = rp_mon.9   #event rp_mon.9 JAP
+	title = rp_mon.9.t
+	desc = rp_mon.9.d
+	picture = GFX_innermon
+	
+	is_triggered_only = yes
+	
+	#ACCEPT
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.9.a
+	760 = {
+			add_dynamic_modifier = { modifier = MON_inner_mon }
+	}
+	756 = {
+			add_dynamic_modifier = { modifier = MON_inner_mon }
+	}
+	621 = {
+			add_dynamic_modifier = { modifier = MON_inner_mon }
+	}
+	611 = {
+			add_dynamic_modifier = { modifier = MON_inner_mon }
+	}
+	612 = {
+			add_dynamic_modifier = { modifier = MON_inner_mon }
+	}
+	761 = {
+			add_dynamic_modifier = { modifier = MON_inner_mon }
+	}
+	add_opinion_modifier = { target = MON modifier = large_increase }
+	unlock_decision_category_tooltip = MON_inner_mon_cat
+
+	}
+}
+	
+#KEYIFSIZ
+country_event = {
+	id = rp_mon.10
+	title = rp_mon.10.t
+	desc = rp_mon.10.d
+	picture = GFX_innermon
+	
+	is_triggered_only = yes
+	
+	#ACCEPT
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.10.a
+	}
+}
+
+
+#Inner Mongolia
+country_event = {
+	id = rp_mon.11 # event rp_mon.11 JAP
+	title = rp_mon.11.t
+	desc = rp_mon.11.d
+	picture = GFX_innermon
+
+	#is_triggered_only = yes
+	
+	trigger = {
+	original_tag = MON
+	621 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		NOT = { tag = MON }
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+	}
+	option = {
+	ai_chance = {base = 10}
+	name = rp_mon.11.a
+		621 = {
+			remove_dynamic_modifier = { modifier = MON_inner_mon }
+			}
+			MON = {transfer_state = 621}
+	}
+}

@@ -1,0 +1,484 @@
+﻿###########################
+# Syrian Events
+###########################
+
+add_namespace = rp_syr
+
+	
+	
+	
+	
+#Treaty of Vienot
+country_event = {
+	id = rp_syr.1
+	title = rp_syr.1.t
+	desc = rp_syr.1.d
+	picture = GFX_fra_syr_treaty_icon
+	
+	is_triggered_only = yes
+	
+	#Finally We are Independent
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.1.a
+	every_country = { news_event = { id = rp_syr.15 hours = 24 } }
+	SYR = {
+	transfer_state = 799
+	transfer_state = 677
+	transfer_state = 680
+	transfer_state = 554
+	transfer_state = 860
+	transfer_state = 861
+	set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+	}
+	swap_ideas = {
+	add_idea = french_influence
+	remove_idea = french_mandate
+	}
+	}
+	LEB = {
+	transfer_state = 553
+	}
+	FRA = {
+	diplomatic_relation = {
+    country = SYR
+    relation = puppet
+    active = no
+	}
+	diplomatic_relation = {
+    country = LEB
+    relation = puppet
+    active = no
+	}
+	}
+	FRA = {
+	set_autonomy = {
+    target = SYR
+    autonomy_state = autonomy_influenced_state
+	}
+	}
+	FRA = {
+	set_autonomy = {
+    target = LEB
+    autonomy_state = autonomy_influenced_state
+	}
+	}
+	SYR = {
+	drop_cosmetic_tag = yes
+	}
+	LEB = {
+	drop_cosmetic_tag = yes
+	}
+	
+	}
+}
+
+
+
+
+
+
+
+
+
+	
+#Should we attack? -TUR
+country_event = {
+	id = rp_syr.2
+	title = rp_syr.2.t
+	desc = rp_syr.2.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#Take Alexandretta
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.2.a
+	SYR = { country_event = { id = rp_syr.3 } }
+	
+	}
+	#NO ATTACK
+	option = {
+	ai_chance = {base = 0}
+	name = rp_syr.2.b
+	remove_state_core = 797
+	add_stability = -0.2
+	add_war_support = -0.2
+	}
+}
+
+
+	
+#Turkey attacks Alexandretta -SYR
+country_event = {
+	id = rp_syr.3
+	title = rp_syr.3.t
+	desc = rp_syr.3.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#FIGHT
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.3.a
+	add_war_support = 0.1
+	add_stability = -0.1
+	start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 344
+					num_provinces = 2
+					on_win = rp_syr.4
+					on_lose = rp_syr.5
+					on_cancel = rp_syr.5
+    }
+				
+    defender = {
+        state = 799
+					num_provinces = 4
+					on_win = rp_syr.7
+					on_lose = rp_syr.6
+					on_cancel = rp_syr.6
+    }
+	}
+	}
+}
+
+	
+#WIN LOSE Events TUR
+#TUR WIN 
+country_event = {
+	id = rp_syr.4
+	title = rp_syr.4.t
+	desc = rp_syr.4.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#KEYIFLI
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.4.a
+	add_stability = 0.1
+	add_war_support = 0.1
+	transfer_state = 799
+	}
+}
+#TUR LOSE
+country_event = {
+	id = rp_syr.5
+	title = rp_syr.5.t
+	desc = rp_syr.5.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#KEYIFSIZ
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.5.a
+	add_stability = -0.1
+	add_war_support = -0.1
+	}
+}	
+
+#WIN LOSE Events SYR
+#SYR LOSE
+country_event = {
+	id = rp_syr.6
+	title = rp_syr.6.t
+	desc = rp_syr.6.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#KEYIFLI
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.6.a
+	add_war_support = -0.1
+	add_stability = -0.1
+	}
+}
+#SYR WIN
+country_event = {
+	id = rp_syr.7
+	title = rp_syr.7.t
+	desc = rp_syr.7.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#KEYIFSIZ
+	option = {
+	ai_chance = {base = 10}
+	name = rp_syr.7.a
+	add_stability = 0.1
+	add_war_support = 0.05
+	}
+}
+#SYRIA WANTS TO UNIFY
+country_event = {
+	id = rp_syr.8
+	title = rp_syr.8.t
+	desc = rp_syr.8.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#YES
+	option = {
+	name = rp_syr.8.a
+	SYR = {
+	annex_country = {
+    target = IRQ
+    transfer_troops = yes
+}
+	}
+	retire_ideology_leader = neutrality
+	create_country_leader = {
+	name = "Ghazi I"
+	desc = "POLITICS_GHAZI_I_DESC"
+	picture = "gfx/leaders/IRQ/r56_portrait_IRQ_ghazi_I.dds"
+	expire = "1965.1.1"
+	ideology = absolute_monarchism
+	traits = {
+		#
+	}
+}
+add_state_core = 675 
+add_state_core = 291
+add_state_core = 676
+	SYR = { change_tag_from = IRQ }
+	}
+	#NO
+	option = {
+	name = rp_syr.8.b
+	SYR = {
+	create_wargoal = {
+	type = take_state_focus
+	target = IRQ
+	generator = { 675 291 676 }
+	}
+	}
+	
+	}
+}
+
+
+#SYRIA WANTS RECOGNITION
+country_event = {
+	id = rp_syr.9
+	title = rp_syr.9.t
+	desc = rp_syr.9.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#YES
+	option = { 
+	name = rp_syr.9.a
+	set_global_flag = SYR_IRQ_accept
+	give_guarantee = SYR
+	}
+	#NO
+	option = {
+	name = rp_syr.9.b
+	set_global_flag = SYR_IRQ_reject
+	}
+}
+
+#SYRIA ASK TERRITORY -ENG
+country_event = {
+	id = rp_syr.10
+	title = rp_syr.10.t
+	desc = rp_syr.10.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#YES
+	option = { 
+	name = rp_syr.10.a
+	ai_chance = {base = 10}
+	SYR = { country_event = { id = rp_syr.11 hours = 6 } }
+	}
+	#NO
+	option = {
+	name = rp_syr.10.b
+	ai_chance = {base = 0}
+	SYR = { country_event = { id = rp_syr.12 hours = 6 } }
+	}
+}
+
+#BRITAIN ACCEPT -SYR
+country_event = {
+	id = rp_syr.11
+	title = rp_syr.11.t
+	desc = rp_syr.11.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#KEYIFLI
+	option = { 
+	name = rp_syr.11.a
+	transfer_state = 455
+	transfer_state = 830
+	transfer_state = 454
+	transfer_state = 831
+	add_state_core = 455
+	add_state_core = 830
+	add_state_core = 454
+	add_state_core = 831
+	}
+}
+
+#BRITAIN REJECT -SYR
+country_event = {
+	id = rp_syr.12
+	title = rp_syr.12.t
+	desc = rp_syr.12.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#KEYIFSIZ
+	option = { 
+	name = rp_syr.12.a
+	add_state_claim = 455
+	add_state_claim = 830
+	add_state_claim = 454
+	add_state_claim = 831
+	}
+}
+
+#SYRIA ANNOUNCES FULL SOVEREIGNTY FROM FRANCE
+country_event = {
+	id = rp_syr.13
+	title = rp_syr.13.t
+	desc = rp_syr.13.d
+	picture = GFX_report_event_chinese_soldiers_fighting
+	
+	is_triggered_only = yes
+	
+	#WE NEVER APPROVED THEIR INDEPENDENCE
+	option = { 
+	name = rp_syr.13.a
+	ai_chance = { factor = 0 }
+	add_opinion_modifier = {
+    target = SYR
+    modifier = large_decrease
+}
+create_wargoal = { type = annex_everything target = SYR }
+
+	}
+	#GOOD FOR THEM
+	option = { 
+	name = rp_syr.13.b
+	ai_chance = { factor = 5 }
+	add_opinion_modifier = {
+    target = SYR
+    modifier = large_increase
+}
+	}
+}
+
+
+
+
+
+#SYRIA WANTS RECOGNITION   #GER
+country_event = {
+	id = rp_syr.14
+	title = rp_syr.14.t
+	desc = rp_syr.14.d
+	picture = GFX_fra_syr_treaty_icon
+	
+	is_triggered_only = yes
+	
+	#YES
+	option = { 
+	name = rp_syr.14.a
+	give_guarantee = SYR
+	add_opinion_modifier = {
+    target = SYR
+    modifier = large_increase
+	}
+	}
+	#NO
+	option = {
+	name = rp_syr.14.b
+	add_opinion_modifier = {
+    target = SYR
+    modifier = large_increase
+	}
+	
+	}
+}
+
+
+
+#Armistice of Mudanya Signed WORLD
+news_event = {
+	id = rp_syr.15
+	title = rp_syr.15.t
+	desc = rp_syr.15.d
+	picture = GFX_news_event_009
+
+	major = yes 
+
+	is_triggered_only = yes
+
+	hidden = no
+
+	fire_only_once = yes 
+
+	immediate = {
+	}
+	
+	option = { 
+		name = rp_syr.15.a 
+	}
+}
+
+
+#VICHY OCCUPIES US
+country_event = {
+	id = rp_syr.16
+	title = rp_syr.16.t
+	desc = rp_syr.16.d
+	picture = GFX_fra_syr_treaty_icon
+	
+	is_triggered_only = yes
+	
+	#YES
+	option = { 
+	name = rp_syr.16.a
+	set_politics = {
+	ruling_party = fascism
+        elections_allowed = no
+        last_election = "1935.12.17"
+        election_frequency = 48
+}
+	set_autonomy = {
+    target = SYR
+    autonomy_state = autonomy_free
+}
+	VIC = {
+	}
+	VIC = {
+	set_autonomy = {
+    target = SYR
+    autonomy_state = autonomy_satellite
+}
+	}
+	}
+	
+}

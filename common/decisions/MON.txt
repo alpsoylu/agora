@@ -1,0 +1,408 @@
+MON_power_struggle_cat = {
+	MON_increase_power_of_cho = {
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = SOV
+		has_goverment = communism
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+		}
+		
+		available = {
+	check_variable = {
+    power_of_amar > 0
+	}
+	check_variable = {
+    power_of_cho < 100
+	}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		custom_effect_tooltip = MON_increase_cho_tt
+		MON = {
+		add_to_variable = {
+		var = power_of_cho
+		value = 10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = -10
+		}
+		}
+		SOV = {
+		add_to_variable = {
+		var = power_of_cho
+		value = 10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = -10
+		}
+		}
+		
+		}
+	}
+	MON_increase_power_of_amar = {
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		has_goverment = communism
+		}
+		
+		fire_only_once = no
+		
+		visible = {
+		}
+		
+		available = {
+	check_variable = {
+    power_of_cho > 0
+	}
+	check_variable = {
+    power_of_amar < 100
+	}
+		}
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		custom_effect_tooltip = MON_increase_amar_tt
+		
+		MON = {
+		add_to_variable = {
+		var = power_of_cho
+		value = -10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = 10
+		}
+		}
+		SOV = {
+		add_to_variable = {
+		var = power_of_cho
+		value = -10
+		}
+		
+		add_to_variable = {
+		var = power_of_amar
+		value = 10
+		}
+		}
+		
+		}
+	}
+	MON_purge_amar_dec = {
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = SOV
+		has_goverment = communism
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		check_variable = {
+    power_of_cho > 80
+	}
+		}
+
+		cost = 100
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		MON = {
+		complete_national_focus = MON_amar_gets_purged 
+		SOV = {
+		set_autonomy = {
+		target = MON
+		autonomy_state = autonomy_puppet
+		}	
+		}
+		}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+MON_inner_mon_cat = {
+MON_reclaim_dabacheng = {  #760
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		MON = {NOT = {controls_state = 760 } }
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		760 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		760 = {
+		remove_dynamic_modifier = { modifier = MON_inner_mon }
+		}
+		transfer_State = 760
+		
+		}
+	}
+MON_reclaim_jiuguan = {  #756
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		MON = {NOT = {controls_state = 756 } }
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		756 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		756 = {
+		remove_dynamic_modifier = { modifier = MON_inner_mon }
+		}
+		transfer_State = 756
+		
+		}
+	}
+MON_reclaim_siuyuan = {  #621
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		MON = {NOT = {controls_state = 621 } }
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		621 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		621 = {
+		remove_dynamic_modifier = { modifier = MON_inner_mon }
+		}
+		transfer_State = 621
+		
+		}
+	}
+MON_reclaim_south_chorar = {  #611
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		MON = {NOT = {controls_state = 611 } }
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		611 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		611 = {
+		remove_dynamic_modifier = { modifier = MON_inner_mon }
+		}
+		transfer_State = 611
+		
+		}
+	}
+MON_reclaim_chorar = {  #612
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		MON = {NOT = {controls_state = 612 } }
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		612 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		612 = {
+		remove_dynamic_modifier = { modifier = MON_inner_mon }
+		}
+		transfer_State = 612
+		
+		}
+	}
+MON_reclaim_hulunbuir = {  #761
+	
+		icon = gre_faction_management
+
+		allowed = {
+		original_tag = MON
+		MON = {NOT = {controls_state = 761 } }
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+		}
+		
+		available = {
+		761 = {
+		has_dynamic_modifier = { modifier = MON_inner_mon }
+		controller = {
+		OR = {
+		is_in_faction_with = JAP
+		tag = JAP
+		}
+		}
+		}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+		761 = {
+		remove_dynamic_modifier = { modifier = MON_inner_mon }
+		}
+		transfer_State = 761
+		
+		}
+	}
+}

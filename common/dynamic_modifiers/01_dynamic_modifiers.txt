@@ -1,0 +1,6 @@
+MON_inner_mon = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_kuvayimilliye_dyn
+	custom_modifier_tooltip = MON_arranged_tt
+}

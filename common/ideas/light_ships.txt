@@ -1,0 +1,117 @@
+ideas = {
+
+	light_ships = { 
+	
+		law = yes
+		
+
+		# Equality for all
+		light_ships_submarines = {
+		    available = {
+				
+			}
+			equipment_bonus = {
+				submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+			modifier = {
+				
+			}
+	
+			cost = 100
+			
+			cancel_if_invalid = yes
+			
+			ai_will_do = {
+   				factor = 0.5
+				modifier = {
+				    OR = {
+					has_government = communism
+					has_government = democratic
+					}
+					factor = 1
+					
+				}
+			}		
+			
+		}
+		
+		
+		
+		light_ships_cruisers = {
+
+			available = {
+		       
+			}
+			equipment_bonus = {
+				light_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			modifier = {
+			    
+			}
+			
+			cost = 100
+
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0.5
+
+				modifier = {
+				    OR = {
+					has_government = fascism
+					has_government = neutrality
+					}
+					factor = 0.5
+					
+				}
+				modifier = {
+				    OR = {
+					has_government = fascism
+					}
+					factor = 2.0
+					
+				}
+   			}
+		}
+		
+		
+		# Mixed conscr (Contract + Obligation)
+		light_ships_destroyers = {
+
+		available = {
+				
+			}
+			
+			equipment_bonus = {
+				destroyer = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			modifier = {
+			    
+			}
+			cancel_if_invalid = yes
+			
+			cost = 100
+			
+			ai_will_do = {
+			
+   				factor = 0.5
+
+   				modifier = {
+				    
+					
+				}
+   			}
+		}
+		
+	}
+}
